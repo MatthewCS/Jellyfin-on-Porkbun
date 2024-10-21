@@ -12,5 +12,5 @@ jellyfinconfig:
 	docker volume create jellyfin-config
 jellyfincache:
 	docker volume create jellyfin-cache
-jellyfin:
+jellyfin: caddyporkbun alldata
 	docker compose up -d
