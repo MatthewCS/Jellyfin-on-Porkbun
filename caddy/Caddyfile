@@ -1,0 +1,16 @@
+{
+    acme_ca https://acme.zerossl.com/v2/DV90
+    email   place@holder.com
+}
+
+localhost:80,
+*.{$DOMAIN},
+{$DOMAIN} {
+  tls {
+    dns porkbun {
+      api_key {$API_KEY}
+      api_secret_key {$API_SECRET_KEY}
+    }
+  }
+  reverse_proxy jellyfin:8096
+}
